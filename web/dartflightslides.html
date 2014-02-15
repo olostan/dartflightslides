@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dartflightslides</title>
+    <link rel="stylesheet" href="prettify/prettify.css">
+    <link rel="stylesheet" href="prettify/sons-of-obsidian.css">
+    <link rel="stylesheet" href="dartflightslides.css">
+    
+  </head>
+  <body onload="prettyPrint()">
+    <div id="stars"></div>
+    <presentation slides="80" class="hidden">
+      <symbol id="logo">
+        <img src="img/Flight_School_Event_White.png">
+      </symbol>
+      <symbol id="webDev">
+        Web Developer
+      </symbol>
+      <symbol id="webDevTalk">
+        Hi, I want to build a web app.
+      </symbol>
+      <symbol class="lib" id="l1">require.js</symbol>
+      <symbol class="lib" id="l2">Backbone</symbol>
+      <symbol class="lib" id="l3">Backbone Marionette</symbol>
+      <symbol class="lib" id="l4">jQuery</symbol>
+      <symbol class="lib" id="l5">Modernizr</symbol>
+      <symbol class="lib" id="l6">moment.js</symbol>
+      <symbol class="lib" id="l7">Dust templates</symbol>
+      <symbol class="lib" id="l8">PhantomJS</symbol>
+      <symbol class="lib" id="l9">Jasmine</symbol>
+      <symbol id="clear">
+        Things should be clear!
+      </symbol>
+      <symbol id="dartSDK">Dart SDK</symbol>
+      <symbol id="dartPackages"><span>Packages</span></symbol>
+      <symbol id="dartPkg1" class="pkg">Unit test</symbol>
+      <symbol id="dartPkg2" class="pkg">Angular</symbol>
+      <symbol id="dartPkg3" class="pkg">Intl</symbol>
+      <symbol id="dartPkg4" class="pkg">your package!</symbol>
+      <symbol id="lightning"></symbol>
+      
+      <symbol id="dartLogo"></symbol>
+      <symbol id="lightningText">Lightning Tour</symbol>
+      <symbol id="codePanel"></symbol>
+      <symbol id="synt1" class="synt"><pre class="prettyprint lang-dart">class Hug {</pre></symbol>
+      <symbol id="synt1c" class="synt-com">Familiar</symbol>
+      <symbol id="synt2" class="synt"><pre class="prettyprint lang-dart">num strength;
+Hug(this.strength)</pre></symbol>
+      <symbol id="synt2c" class="synt-com">Terse</symbol>
+      <symbol id="synt3" class="synt"><pre class="prettyprint lang-dart">Hug operator +(Hug other) {
+  return 
+     new Hug(strength + other.strength);
+}</pre></symbol>
+      <symbol id="synt3c" class="synt-com">Operator overriding</symbol>
+      <symbol id="synt4" class="synt"><pre class="prettyprint lang-dart">void patBack({int hands: 1}) {
+  // ...
+}</pre></symbol>
+      <symbol id="synt4c" class="synt-com">Named, optional params w/ default value</symbol>
+      <symbol id="synt5" class="synt"><pre class="prettyprint lang-dart"> String toString() =>
+       "Embraceometer reads $strength";
+}</pre></symbol>
+      <symbol id="synt5c" class="synt-com">One-line function</symbol>
+      <symbol id="synt5c2" class="synt-com">String interpolation</symbol>
+      
+      <symbol id="synt6" class="synt"><pre class="prettyprint lang-dart">main() {
+  var hug = new Hug(10);</pre></symbol>
+      <symbol id="synt7" class="synt"><pre class="prettyprint lang-dart">var bigHug = hug + new Hug(100);</pre></symbol>
+      <symbol id="synt8" class="synt"><pre class="prettyprint lang-dart">bigHug.patBack(hands: 2);</pre></symbol>
+      <symbol id="synt9" class="synt"><pre class="prettyprint lang-dart">  print(bigHug);
+       // Embraceometer reads 110
+}</pre></symbol>
+
+      <symbol id="synt10" class="synt"><pre class="prettyprint lang-dart">var button = new ButtonElement();
+button.id = 'fancy';
+button.text = 'Click Point';
+button.classes.add('important');
+button.onClick.listen((e) => addTopHat());
+
+parentElement.children.add(button);</pre></symbol>
+      <symbol id="synt11" class="synt"><pre class="prettyprint lang-dart">var button = new ButtonElement()
+  ..id = 'fancy'
+  ..text = 'Click Point'
+  ..classes.add('important')
+  ..onClick.listen((e) => addTopHat());
+
+parentElement.children.add(button);
+</pre></symbol>
+
+    <symbol id="synt12" class="synt"><pre class="prettyprint lang-dart">class Registrator {
+  doIt(User user) { … }
+}
+var reg = new Registrator();
+reg.doIt(user); // implied!</pre></symbol>
+    <symbol id="synt13" class="synt"><pre class="prettyprint lang-dart">class Registrator {
+  call(User user) { … }
+}
+var reg = new Registrator();
+reg(user); // just call it</pre></symbol>
+
+    <symbol id="synt14" class="synt"><pre class="prettyprint lang-dart">@Extreme(ftw: true)
+class Awesome {
+  @upHigh int highFives;
+}</pre></symbol>
+      <symbol id="cleanSemantics"></symbol>
+      <symbol id="cleanSemanticsText">Clean semantics and behavior</symbol>
+      <symbol id="cleanSemanticsExample">Examples:
+      <ul>
+        <li>Only <i>true</i> is truthy</li>
+        <li>There is no <i>undefined</i>, only <i>null</i></li>
+        <li>No type coercion with <i>==, +</i></li>
+        <li>Throw error on missing method</li>
+      </ul>
+      </symbol>
+      <symbol id="cleanSemanticsThis">
+        <pre class="prettyprint lang-dart">class AwesomeButton {
+  AwesomeButton(button) {
+    button.onClick.listen((Event e) =>
+             this.atomicDinosaurRock());
+  }
+  atomicDinosaurRock() {
+    /* ... */
+  }
+}</pre></symbol>
+        <symbol id="async">Async</symbol>
+        <symbol id="asyncCode"><pre class="prettyprint lang-dart">catService.getCatData("cute", (cat) {
+  catService.getCatPic(cat.imageId, (pic) {
+    imageWorker.rotate(pic, 30, (rotated) {
+      draw(rotated);
+    });
+  });
+});</pre></symbol>
+        <symbol id="asyncScary">Scary</symbol>
+        <symbol id="asyncCodeThen"><pre class="prettyprint lang-dart">catService.getCat("cute") // returns a Future
+  .then((cat) => 
+      catService.getCatPic(cat.imageId))
+  .then((pic) => 
+      imageWorker.rotate(pic, 30))
+  .then((rotated) => draw(rotated))
+  .catchError((e) => print("Oh noes!"));</pre></symbol>
+      <symbol id="angLogo"></symbol>
+      <symbol id="angDry">D.R.Y.</symbol>
+      <symbol id="angStruct">Structure</symbol>
+      <symbol id="angTest">Testability</symbol>
+      <symbol id="angMVC">Structure: Model-View-Controller</symbol>
+      
+      <symbol id="angModel">Model<pre class="prettyprint lang-dart">class Person { String name; }</pre></symbol>
+      <symbol id="angView">View<pre class="prettyprint lang-html">&lt;div person&gt;
+  Hi, {<span>{</span>ctrl.person.name}}
+&lt;/div&gt;</pre></symbol>
+      <symbol id="angCtrl">Controller<pre class="prettyprint lang-dart">@NgController(
+    selector: '[person]',
+    publishAs: 'ctrl'
+)
+class Controller {
+  Person person = new Person();
+
+  Controller() {
+    person.name = 'Bob';
+  }
+}</pre></symbol>
+    <symbol id="angCtrlExpl">Controllers:
+      <ul>
+        <li>Expose model to view</li>
+        <li>Handle user interaction</li>
+        <li>Update model to change the view</li>
+      </ul>
+      </symbol>
+      <symbol id="angDirDemo">Directives<pre class="prettyprint lang-html">&lt;div ng-repeat=&#39;item in cart.items&#39;&gt;
+  &lt;span ng-bind=&#39;item.name&#39;&gt;&lt;/span&gt;
+  &lt;button ng-click=&#39;cart.delete($index)&#39;&gt;
+    Delete
+  &lt;/button&gt;
+&lt;/div&gt;</pre></symbol>
+      <symbol id="angFilters">
+          Filters:
+          <pre class="prettyprint lang-html">&lt;p&gt;{<span>{</span> name | reverse }}&lt;/p&gt;</pre>
+          Filters can take parameters:
+          <pre class="prettyprint lang-html">&lt;p&gt;{<span>{</span> amount | currency:us }}&lt;/p&gt;</pre>
+          Filters can chain:
+          <pre class="prettyprint lang-html">&lt;p&gt;{<span>{</span> msg | embiggen | shoutify }}&lt;/p&gt;</pre>                    
+      </symbol>
+      <symbol id="angFilter">Filter<pre class="prettyprint lang-dart">@NgFilter(name: 'reverse')
+class Reverser {
+  String call(String input) {
+    if (input == null) return '';
+    return input.split('')
+      .reversed.join('');
+  }
+}</pre></symbol>
+      <symbol id="angDI">Dependency Injection<pre class="prettyprint lang-dart">@NgInjectableService() 
+class Users { /* … */ }
+      </pre>
+      Usage:
+      <pre class="prettyprint lang-dart">class Login {
+  Users users;
+  Login(this.users);</pre>
+      </symbol>
+      <symbol id="angRouting">Routing</symbol>
+      <symbol id="angRoutingCode" class="codeSample"><pre class="prettyprint lang-dart">class AppRouteInitializer implements RouteInitializer {
+  init(Router router, ViewFactory view) {
+    router.root
+      ..addRoute(
+          name: 'overview',
+          path: '/overview',
+          defaultRoute: true,
+          enter: view('views/overview.html'))
+      ..addRoute(name: 'analytics',
+          path: '/analytics',
+          enter: view('views/analytics.html'));
+  }
+}</pre></symbol>
+    <symbol id="drums">First appearance in AngularDart!</symbol>
+    <symbol id="components">Components</symbol>
+    
+    <symbol id="cComponent">ngComponent</symbol>  
+    <symbol id="cController" class="comp">Controller</symbol>  
+    <symbol id="cTemplate" class="comp">Template</symbol>  
+    <symbol id="cShadow" class="comp">Shadow DOM</symbol>  
+    <symbol id="cCustom" class="comp">Custom Element Name</symbol>  
+
+    <symbol id="cCode" class="codeSample"><pre class="prettyprint lang-dart">@NgComponent(
+    selector: 'rating',
+    templateUrl: 'packages/ng_rating/rating.html',
+    cssUrl: 'packages/ng_rating/rating.css',
+    publishAs: 'cmp'
+)
+class RatingComponent {
+  @NgTwoWay('rating')
+  int rating = 0;
+    </pre><pre class="prettyprint lang-html">&lt;rating max-rating=&quot;5&quot; rating=&quot;item.rating&quot;&gt;
+&lt;/rating&gt;</pre>
+    </symbol>
+    <symbol id="QA">Questions?</symbol>
+      
+    </presentation>
+    <script src="packages/shadow_dom/shadow_dom.min.js"></script>
+    <script type="application/dart" src="dartflightslides.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+    <script src="prettify/prettify.js"></script>
+    <script src="prettify/lang-dart.js"></script>
+    <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
+  </body>
+</html>

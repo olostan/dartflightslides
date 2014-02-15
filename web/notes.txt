@@ -1,0 +1,2 @@
+images:
+http://www.creatency.com/blog/so-you-wanna-be-a-web-developer/
